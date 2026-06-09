@@ -1129,7 +1129,7 @@ class FieldDialog(ctk.CTkToplevel):
         self.geometry("520x500")
         self.resizable(True, True)
         self.configure(fg_color=COLORS["bg_secondary"])
-        self.grab_set()
+        self.after(100, self.grab_set)
 
         self._build()
 
@@ -1463,7 +1463,7 @@ class CropDialog(ctk.CTkToplevel):
         self.minsize(580, 620)
         self.resizable(True, True)
         self.configure(fg_color=COLORS["bg_secondary"])
-        self.grab_set()
+        self.after(100, self.grab_set)
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
@@ -1694,7 +1694,7 @@ class SellCropDialog(ctk.CTkToplevel):
         self.geometry("620x680")
         self.resizable(True, True)
         self.configure(fg_color=COLORS["bg_secondary"])
-        self.grab_set()
+        self.after(100, self.grab_set)
 
         self._build()
 
@@ -2047,7 +2047,7 @@ class WorkDialog(ctk.CTkToplevel):
         self.minsize(520, 620)
         self.resizable(True, True)
         self.configure(fg_color=COLORS["bg_secondary"])
-        self.grab_set()
+        self.after(100, self.grab_set)
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
